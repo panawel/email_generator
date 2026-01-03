@@ -1,0 +1,7 @@
+Email Generator.app/
+Email Generator.exe
+dist/
+build/
+__pycache__/
+*.pyc
+storage_backup.py
