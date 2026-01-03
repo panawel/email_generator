@@ -686,6 +686,11 @@ class EmailApp:
             self.selected_saved_address = address
 
     def login_to_saved_email(self, event=None):
+        if event:
+            column = self.saved_tree.identify_column(event.x)
+            if column != "#1":
+                return # Only log in if Address column is clicked
+                
         selection = self.saved_tree.selection()
         if not selection:
              # handle empty area clicks if needed
